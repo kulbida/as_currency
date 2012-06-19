@@ -16,3 +16,12 @@ require 'as_currency'
 
 class Test::Unit::TestCase
 end
+
+class Account
+  include AsCurrency
+  def amount
+    999.1
+  end
+  as_currency :amount
+end
+

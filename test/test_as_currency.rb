@@ -1,7 +1,11 @@
-require 'helper'
+require "test/unit"
+require "helper"
 
 class TestAsCurrency < Test::Unit::TestCase
-  should "probably rename this file and start testing for real" do
-    flunk "hey buddy, you should probably rename this file and start testing for real"
+
+  should "test as_currency method" do
+    account = Account.new
+    assert_equal('$999.10', account.amount_as_currency)
   end
+
 end
